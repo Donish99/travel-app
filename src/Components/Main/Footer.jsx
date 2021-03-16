@@ -16,15 +16,21 @@ const FooterDiv = styled.div`
 const Footer = ({ lang }) => {
   return (
     <FooterDiv>
-      <IconButton color="primary">
-        <GitHubIcon />
-      </IconButton>
-      <IconButton color="primary">
-        <LinkedInIcon />
-      </IconButton>
-      <IconButton color="primary">
-        <TelegramIcon />
-      </IconButton>
+      <a href="http://github.com/Donish99">
+        <IconButton color="primary">
+          <GitHubIcon />
+        </IconButton>
+      </a>
+      <a href="https://www.linkedin.com/in/akhmadullo-nurmakhamatov-8165111b3">
+        <IconButton color="primary">
+          <LinkedInIcon />
+        </IconButton>
+      </a>
+      <a href="http://t.me/Nurmakhamatov_A">
+        <IconButton color="primary">
+          <TelegramIcon />
+        </IconButton>
+      </a>
     </FooterDiv>
   );
 };

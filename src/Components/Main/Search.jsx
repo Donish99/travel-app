@@ -31,26 +31,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Search = ({ lang }) => {
+const Search = ({
+  lang,
+  query,
+  searchResults,
+  handleSearchInput,
+  handleQuerySubmit,
+}) => {
   const classes = useStyles();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(123);
-  };
-
+  console.log(searchResults);
   return (
     <SearchDiv>
       <Paper
         component="form"
         className={classes.root}
-        onSubmit={(e) => handleSubmit(e)}
+        onSubmit={(e) => handleQuerySubmit(e)}
       >
         <InputBase
           autoFocus
           className={classes.input}
+          value={query}
+          onChange={handleSearchInput}
           placeholder={lang.search + "..."}
-          inputProps={{ "aria-label": "search google maps" }}
         />
         <IconButton
           color="primary"

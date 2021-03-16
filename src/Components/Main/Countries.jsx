@@ -6,7 +6,6 @@ import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import InfoIcon from "@material-ui/icons/Info";
-import tileData from "./../../countries";
 
 const CountriesDiv = styled.div`
   height: calc(100% - 12% - 43px);
@@ -35,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Countries = () => {
+const Countries = ({ tileData }) => {
   const classes = useStyles();
 
   return (

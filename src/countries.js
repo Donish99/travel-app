@@ -1,4 +1,4 @@
-import uzb from "./static/images/uzbekistan.jpg";
+// import uzb from "./static/images/uzbekistan.jpg";
 import ru from "./static/images/russia.jpg";
 import en from "./static/images/england.jpg";
 import us from "./static/images/usa.jpg";

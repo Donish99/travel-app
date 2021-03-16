@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import {
@@ -14,7 +14,6 @@ const NavigationDiv = styled.div`
   width: 100%;
   height: 5%;
   justify-content: space-between;
-  /* background-color: #d3f7ca; */
   display: flex;
   padding: 0 25px;
   box-shadow: 0 0 3px 0px #949494;
@@ -22,11 +21,15 @@ const NavigationDiv = styled.div`
 `;
 
 const Navigation = ({ lang, handleLangChange }) => {
+  const [open, setOpen] = useState(false);
+
+  const handleUser = () => setOpen((prevState) => !prevState);
+
   return (
     <NavigationDiv>
       <div>
-        {/* <User /> */}
-        <IconButton color="primary">
+        <User open={open} lang={lang} handleCancel={handleUser} />
+        <IconButton color="primary" onClick={handleUser}>
           <AccountBoxIcon />
         </IconButton>
       </div>
