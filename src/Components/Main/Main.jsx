@@ -6,6 +6,7 @@ import Navigation from "./Navigation";
 const MainDiv = styled.div`
   width: 100%;
   height: 100vh;
+  overflow: hidden;
 `;
 
 const ContentDiv = styled.div`

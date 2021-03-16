@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Main from "./Components/Main/Main";
 import lang from "./lang.json";
+import "./Components/CustomScroll.css";
 
 window.lang = "en";
 

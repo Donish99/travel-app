@@ -1,12 +1,14 @@
 import React from "react";
 import Search from "./Search";
 import Countries from "./Countries";
+import Footer from "./Footer";
 
 const Content = ({ lang }) => {
   return (
     <>
       <Search lang={lang} />
-      <Countries />
+      <Countries lang={lang} />
+      <Footer lang={lang} />
     </>
   );
 };

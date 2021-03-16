@@ -7,8 +7,8 @@ import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
 
 const SearchDiv = styled.div`
-  background-color: #b4abb9;
-  height: 30%;
+  /* background-color: #b4abb9; */
+  height: 12%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
     padding: "2px 4px",
     display: "flex",
     alignItems: "center",
-    width: 400,
+    width: 300,
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -53,6 +53,7 @@ const Search = ({ lang }) => {
           inputProps={{ "aria-label": "search google maps" }}
         />
         <IconButton
+          color="primary"
           type="submit"
           className={classes.iconButton}
           aria-label="search"
