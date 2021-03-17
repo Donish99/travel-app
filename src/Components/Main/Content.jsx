@@ -7,6 +7,7 @@ import countryData from "./../../countries";
 const Content = ({ lang }) => {
   const [query, setQuery] = useState("");
   const [searchResults, setSearchResults] = useState(countryData);
+  const language = localStorage.getItem("language");
 
   const handleSearchInput = (e) => {
     setQuery(e.target.value);
@@ -30,8 +31,8 @@ const Content = ({ lang }) => {
     }
     let pattern = new RegExp(val, "i");
     let s = countryData.filter((c) => {
-      if (c[window.lang].name.match(pattern)) return c;
-      if (c[window.lang].capital.match(pattern)) return c;
+      if (c[language].name.match(pattern)) return c;
+      if (c[language].capital.match(pattern)) return c;
     });
     setSearchResults(s);
   };

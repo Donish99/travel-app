@@ -4,8 +4,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
-import IconButton from "@material-ui/core/IconButton";
-import InfoIcon from "@material-ui/icons/Info";
+// import IconButton from "@material-ui/core/IconButton";
+// import InfoIcon from "@material-ui/icons/Info";
 
 const CountriesDiv = styled.div`
   height: calc(100% - 12% - 43px);
@@ -15,6 +15,9 @@ const CountriesDiv = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
+`;
+const CustomDiv = styled.div`
+  border: 1px solid red;
 `;
 
 const useStyles = makeStyles((theme) => ({
@@ -28,6 +31,9 @@ const useStyles = makeStyles((theme) => ({
   gridList: {
     width: "99%",
     height: "100%",
+  },
+  gridListTile: {
+    border: "2px solid red",
   },
   icon: {
     color: "rgba(255, 255, 255, 0.54)",
@@ -51,14 +57,14 @@ const Countries = ({ tileData, searchResults }) => {
                 <GridListTileBar
                   title={tile[language].name}
                   subtitle={<span>{tile[language].capital}</span>}
-                  actionIcon={
-                    <IconButton
-                      aria-label={`info about ${tile[language].name}`}
-                      className={classes.icon}
-                    >
-                      <InfoIcon />
-                    </IconButton>
-                  }
+                  // actionIcon={
+                  //   <IconButton
+                  //     aria-label={`info about ${tile[language].name}`}
+                  //     className={classes.icon}
+                  //   >
+                  //     <InfoIcon />
+                  //   </IconButton>
+                  // }
                 />
               </GridListTile>
             ))}
