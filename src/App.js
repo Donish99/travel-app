@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Main from "./Components/Main/Main";
 import lang from "./lang.json";
 import "./Components/CustomScroll.css";
@@ -29,7 +29,7 @@ function App() {
         )}
       />
       <Route
-        path="/country"
+        path="/country/:id"
         render={(props) => (
           <Country
             {...props}

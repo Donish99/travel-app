@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Search from "./Search";
 import Countries from "./Countries";
 import Footer from "./Footer";
-import countryData from "./../../countries";
+import countryData from "../../static/mainCountries";
 
 const Content = ({ lang }) => {
   const [query, setQuery] = useState("");
@@ -32,7 +32,7 @@ const Content = ({ lang }) => {
     let pattern = new RegExp(val, "i");
     let s = countryData.filter((c) => {
       if (c[language].name.match(pattern)) return c;
-      if (c[language].capital.match(pattern)) return c;
+      else if (c[language].capital.match(pattern)) return c;
     });
     setSearchResults(s);
   };

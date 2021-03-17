@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Content from "./Content";
-import Navigation from "./Navigation";
+import Navigation from "../Navigation";
 
 const MainDiv = styled.div`
   width: 100%;

@@ -4,8 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
 import GridListTileBar from "@material-ui/core/GridListTileBar";
-// import IconButton from "@material-ui/core/IconButton";
-// import InfoIcon from "@material-ui/icons/Info";
+import { withRouter } from "react-router-dom";
 
 const CountriesDiv = styled.div`
   height: calc(100% - 12% - 43px);
@@ -15,9 +14,6 @@ const CountriesDiv = styled.div`
   flex-direction: column;
   align-items: center;
   overflow: hidden;
-`;
-const CustomDiv = styled.div`
-  border: 1px solid red;
 `;
 
 const useStyles = makeStyles((theme) => ({
@@ -40,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Countries = ({ tileData, searchResults }) => {
+const Countries = ({ tileData, searchResults, history }) => {
   const classes = useStyles();
   const language = localStorage.getItem("language");
 
@@ -52,19 +48,16 @@ const Countries = ({ tileData, searchResults }) => {
         <div className={classes.root}>
           <GridList cellHeight={180} className={classes.gridList}>
             {tileData.map((tile) => (
-              <GridListTile key={tile.img} rows={2} cols={1}>
+              <GridListTile
+                key={tile.img}
+                rows={2}
+                cols={1}
+                onClick={() => console.log(history.push(`/country/${tile.id}`))}
+              >
                 <img src={tile.img} alt={tile[language].name} />
                 <GridListTileBar
                   title={tile[language].name}
                   subtitle={<span>{tile[language].capital}</span>}
-                  // actionIcon={
-                  //   <IconButton
-                  //     aria-label={`info about ${tile[language].name}`}
-                  //     className={classes.icon}
-                  //   >
-                  //     <InfoIcon />
-                  //   </IconButton>
-                  // }
                 />
               </GridListTile>
             ))}
@@ -75,4 +68,4 @@ const Countries = ({ tileData, searchResults }) => {
   );
 };
 
-export default Countries;
+export default withRouter(Countries);
