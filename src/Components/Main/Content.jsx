@@ -18,6 +18,11 @@ const Content = ({ lang }) => {
     filterData(query);
   };
 
+  const clearQuery = () => {
+    setQuery("");
+    filterData("");
+  };
+
   const filterData = (val) => {
     if (val === "") {
       setSearchResults(countryData);
@@ -38,6 +43,7 @@ const Content = ({ lang }) => {
         query={query}
         handleSearchInput={handleSearchInput}
         handleQuerySubmit={handleQuerySubmit}
+        clearQuery={clearQuery}
       />
       <Countries
         lang={lang}

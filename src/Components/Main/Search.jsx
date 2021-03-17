@@ -5,9 +5,10 @@ import Paper from "@material-ui/core/Paper";
 import InputBase from "@material-ui/core/InputBase";
 import IconButton from "@material-ui/core/IconButton";
 import SearchIcon from "@material-ui/icons/Search";
+import Divider from "@material-ui/core/Divider";
+import CloseIcon from "@material-ui/icons/Close";
 
 const SearchDiv = styled.div`
-  /* background-color: #b4abb9; */
   height: 12%;
   width: 100%;
   display: flex;
@@ -20,7 +21,9 @@ const useStyles = makeStyles((theme) => ({
     padding: "2px 4px",
     display: "flex",
     alignItems: "center",
-    width: 300,
+    width: "50%",
+    minWidth: 310,
+    maxWidth: 500,
   },
   input: {
     marginLeft: theme.spacing(1),
@@ -31,15 +34,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Search = ({
-  lang,
-  query,
-  searchResults,
-  handleSearchInput,
-  handleQuerySubmit,
-}) => {
+const Search = ({ lang, query, handleSearchInput, handleQuerySubmit,clearQuery }) => {
   const classes = useStyles();
-  console.log(searchResults);
   return (
     <SearchDiv>
       <Paper
@@ -54,6 +50,20 @@ const Search = ({
           onChange={handleSearchInput}
           placeholder={lang.search + "..."}
         />
+        {query !== "" ? (
+          <>
+            <IconButton
+              color="secondary"
+              type="submit"
+              className={classes.iconButton}
+              aria-label="search"
+              onClick={clearQuery}
+            >
+              <CloseIcon />
+            </IconButton>
+            <Divider orientation="vertical" flexItem />
+          </>
+        ) : null}
         <IconButton
           color="primary"
           type="submit"

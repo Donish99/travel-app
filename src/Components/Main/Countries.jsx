@@ -36,30 +36,34 @@ const useStyles = makeStyles((theme) => ({
 
 const Countries = ({ tileData, searchResults }) => {
   const classes = useStyles();
-  console.log(searchResults);
+
   return (
     <CountriesDiv>
-      <div className={classes.root}>
-        <GridList cellHeight={180} className={classes.gridList}>
-          {tileData.map((tile) => (
-            <GridListTile key={tile.img} rows={2} cols={1}>
-              <img src={tile.img} alt={tile[window.lang].name} />
-              <GridListTileBar
-                title={tile[window.lang].name}
-                subtitle={<span>{tile[window.lang].capital}</span>}
-                actionIcon={
-                  <IconButton
-                    aria-label={`info about ${tile[window.lang].name}`}
-                    className={classes.icon}
-                  >
-                    <InfoIcon />
-                  </IconButton>
-                }
-              />
-            </GridListTile>
-          ))}
-        </GridList>
-      </div>
+      {searchResults.length === 0 ? (
+        <h1>Not found</h1>
+      ) : (
+        <div className={classes.root}>
+          <GridList cellHeight={180} className={classes.gridList}>
+            {tileData.map((tile) => (
+              <GridListTile key={tile.img} rows={2} cols={1}>
+                <img src={tile.img} alt={tile[window.lang].name} />
+                <GridListTileBar
+                  title={tile[window.lang].name}
+                  subtitle={<span>{tile[window.lang].capital}</span>}
+                  actionIcon={
+                    <IconButton
+                      aria-label={`info about ${tile[window.lang].name}`}
+                      className={classes.icon}
+                    >
+                      <InfoIcon />
+                    </IconButton>
+                  }
+                />
+              </GridListTile>
+            ))}
+          </GridList>
+        </div>
+      )}
     </CountriesDiv>
   );
 };
