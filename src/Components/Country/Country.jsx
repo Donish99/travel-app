@@ -4,6 +4,7 @@ import Navigation from "../Navigation";
 import { IconButton } from "@material-ui/core";
 import { HomeOutlined } from "@material-ui/icons";
 import countryDetails from "../../static/countriesDetail";
+import CountryContent from "./CountryContent";
 
 const MainDiv = styled.div`
   width: 100%;
@@ -23,11 +24,18 @@ const Country = ({ lang, match, handleLangChange, history }) => {
     </IconButton>
   );
   const countryId = match.params.id;
-  console.log(countryDetails);
+  const data = countryDetails.filter((d) => d.id === parseInt(countryId))[0];
   return (
     <MainDiv>
-      <Navigation lang={lang} handleLangChange={handleLangChange} Back={Back} />
-      <ContentDiv>hello</ContentDiv>
+      <Navigation
+        lang={lang}
+        handleLangChange={handleLangChange}
+        Back={Back}
+        data={data}
+      />
+      <ContentDiv>
+        <CountryContent data={data} />
+      </ContentDiv>
     </MainDiv>
   );
 };

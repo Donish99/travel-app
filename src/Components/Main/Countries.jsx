@@ -7,7 +7,7 @@ import GridListTileBar from "@material-ui/core/GridListTileBar";
 import { withRouter } from "react-router-dom";
 
 const CountriesDiv = styled.div`
-  height: calc(100% - 12% - 43px);
+  height: calc(100% - 12% - 45px);
   width: 100%;
   display: flex;
   justify-content: center;

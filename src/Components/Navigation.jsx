@@ -20,7 +20,7 @@ const NavigationDiv = styled.div`
   min-height: 43px;
 `;
 
-const Navigation = ({ lang, handleLangChange, Back }) => {
+const Navigation = ({ lang, handleLangChange, Back, data }) => {
   const [open, setOpen] = useState(false);
 
   const handleUser = () => setOpen((prevState) => !prevState);
@@ -38,7 +38,9 @@ const Navigation = ({ lang, handleLangChange, Back }) => {
         )}
       </div>
       <Typography variant="h4" component="h4" color="primary">
-        {lang.wellcome}!
+        {data
+          ? data[localStorage.getItem("language")].name
+          : lang.wellcome + "!"}
       </Typography>
       <FormControl variant="filled" size="small">
         <Select

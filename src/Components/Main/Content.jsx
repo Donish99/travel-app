@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Search from "./Search";
 import Countries from "./Countries";
-import Footer from "./Footer";
+import Footer from "../Footer";
 import countryData from "../../static/mainCountries";
 
 const Content = ({ lang }) => {
