@@ -40,7 +40,7 @@ const Navigation = ({ lang, handleLangChange }) => {
         <Select
           labelId="demo-simple-select-filled-label"
           id="demo-simple-select-filled"
-          value={window.lang}
+          value={localStorage.getItem("language")}
           onChange={handleLangChange}
           variant="outlined"
         >

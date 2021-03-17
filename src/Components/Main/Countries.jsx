@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Countries = ({ tileData, searchResults }) => {
   const classes = useStyles();
+  const language = localStorage.getItem("language");
 
   return (
     <CountriesDiv>
@@ -46,13 +47,13 @@ const Countries = ({ tileData, searchResults }) => {
           <GridList cellHeight={180} className={classes.gridList}>
             {tileData.map((tile) => (
               <GridListTile key={tile.img} rows={2} cols={1}>
-                <img src={tile.img} alt={tile[window.lang].name} />
+                <img src={tile.img} alt={tile[language].name} />
                 <GridListTileBar
-                  title={tile[window.lang].name}
-                  subtitle={<span>{tile[window.lang].capital}</span>}
+                  title={tile[language].name}
+                  subtitle={<span>{tile[language].capital}</span>}
                   actionIcon={
                     <IconButton
-                      aria-label={`info about ${tile[window.lang].name}`}
+                      aria-label={`info about ${tile[language].name}`}
                       className={classes.icon}
                     >
                       <InfoIcon />
