@@ -36,11 +36,14 @@ const Content = ({ lang }) => {
       <Search
         lang={lang}
         query={query}
-        searchResults={searchResults}
         handleSearchInput={handleSearchInput}
         handleQuerySubmit={handleQuerySubmit}
       />
-      <Countries lang={lang} tileData={searchResults} />
+      <Countries
+        lang={lang}
+        tileData={searchResults}
+        searchResults={searchResults}
+      />
       <Footer lang={lang} />
     </>
   );

@@ -37,6 +37,7 @@ function App() {
           />
         )}
       />
+      <Redirect to="/main" />
     </Switch>
   );
 }

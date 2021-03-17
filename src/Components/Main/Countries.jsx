@@ -34,9 +34,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Countries = ({ tileData }) => {
+const Countries = ({ tileData, searchResults }) => {
   const classes = useStyles();
-
+  console.log(searchResults);
   return (
     <CountriesDiv>
       <div className={classes.root}>
