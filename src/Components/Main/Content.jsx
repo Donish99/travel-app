@@ -31,8 +31,9 @@ const Content = ({ lang }) => {
     }
     let pattern = new RegExp(val, "i");
     let s = countryData.filter((c) => {
-      if (c[language].name.match(pattern)) return c;
-      else if (c[language].capital.match(pattern)) return c;
+      return (
+        c[language].name.match(pattern) || c[language].capital.match(pattern)
+      );
     });
     setSearchResults(s);
   };
