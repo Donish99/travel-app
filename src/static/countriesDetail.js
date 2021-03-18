@@ -132,7 +132,7 @@ const countryDetails = [
         "Germaniya (nemicha: Deutschland), Germaniya Federativ Respublikasi (nemicha: Bundesrepublik Deutschland) — Markaziy Yevropadagi davlat.",
     },
     images: [ge1, ge2, ge3, ge4],
-    video: "",
+    video: "https://www.youtube.com/watch?v=ZHHbpy91O2E",
     capitalMarker: [13.392333984375, 52.532931647583325],
   },
   {
