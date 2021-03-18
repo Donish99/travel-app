@@ -60,8 +60,8 @@ const countryDetails = [
         "Rossiya (ruscha: Россия), Rossiya Federatsiyasi (ruscha: Российская Федерация) — Yevropaning sharqida, Osiyoning shimolida joylashgan mamlakat.",
     },
     images: [ru1, ru2, ru3, ru4],
-    video: "",
-    capitalMarker: [37.61993408203125, 55.75957720924986],
+    video: "https://youtu.be/vfUrK9pFfUg",
+    capitalMarker: [55.75957720924986, 37.61993408203125],
   },
   {
     id: 3,
@@ -84,8 +84,8 @@ const countryDetails = [
         "Ángliya (inglizcha: England) – Buyuk Britaniya va Shimoliy Irlandiya Qoʻshma Qirolligining eng katta qismi. Angliya Buyuk Britaniya katta orolining janubi-gʻarbini egallagan. ",
     },
     images: [en1, en2, en3, en4],
-    video: "",
-    capitalMarker: [-0.11810302734375, 51.517288954651846],
+    video: "https://youtu.be/X8zLJlU_-60",
+    capitalMarker: [51.517288954651846, -0.11810302734375],
   },
   {
     id: 4,
@@ -108,8 +108,8 @@ const countryDetails = [
         "Amerika Qoʻshma Shtatlari (AQSh, inglizcha: United States of America) – Shimoliy Amerikadagi mamlakat. Poytaxti – Vashington shahri, BMT aʼzosi. Amerika Qoʻshma Shtatlari Sharqdan Atlantika, gʻarbdan Tinch okeani, janubi-sharqdan Meksika qoʻltigʻi bilan oʻralgan.",
     },
     images: [us1, us2, us3, us4],
-    video: "",
-    capitalMarker: [-77.0361328125, 38.89530825492018],
+    video: "https://youtu.be/4Ot0T4iCXfM",
+    capitalMarker: [38.89530825492018, -77.0361328125],
   },
   {
     id: 5,
@@ -133,7 +133,7 @@ const countryDetails = [
     },
     images: [ge1, ge2, ge3, ge4],
     video: "https://www.youtube.com/watch?v=ZHHbpy91O2E",
-    capitalMarker: [13.392333984375, 52.532931647583325],
+    capitalMarker: [52.532931647583325, 13.392333984375],
   },
   {
     id: 6,
@@ -156,8 +156,8 @@ const countryDetails = [
         "Italiya (Italia), Italiya Respublikasi (Repubblica Italiana) – Yevropa janubida, Oʻrta dengiz havzasida joylashgan davlat. Apennin yarim orol, Sitsiliya, Sardiniya va boshqa kichik orollarni oʻz ichiga olgan.",
     },
     images: [it1, it2, it3, it4],
-    video: "",
-    capitalMarker: [12.480468749999998, 41.902277040963696],
+    video: "https://youtu.be/f-9ijiN31LI",
+    capitalMarker: [41.902277040963696, 12.480468749999998],
   },
   {
     id: 7,
@@ -180,8 +180,8 @@ const countryDetails = [
         "Turkiya (turkcha: Türkiye), Turkiya Respublikasi (turkcha: Türkiye Cumhuriyeti) - Osiyoning gʻarbiy qismi va Yevropaning janubiy Turkiyaning poytaxti - Anqara shahri. Davlat tili - Turk tili. Maydoni — 783,562 km². Aholi soni (2019) — 83.154.997. Pul birligi — lira. Turkiya Respublikasi 81 ta viloyatlardan iborat.",
     },
     images: [tr1, tr2, tr3, tr4],
-    video: "",
-    capitalMarker: [32.8271484375, 39.9434364619742],
+    video: "https://youtu.be/_FA5_erQTCw",
+    capitalMarker: [39.9434364619742, 32.8271484375],
   },
   {
     id: 8,
@@ -204,8 +204,8 @@ const countryDetails = [
         "Misr (rasmiy nomlanishi Misr Arab Respublikasi arabcha: جمهورية مصر العربية‎‎ Jumhuriya Misr al-Arabiya) — Afrikaning shimoliy-sharqiy va qisman Osiyo (Sinay yarim orol) da joylashgan davlat. Maydoni 1001,4 ming km². Aholisi 69,5 mln. kishi (2001)",
     },
     images: [eg1, eg2, eg3, eg4],
-    video: "",
-    capitalMarker: [31.245117187499996, 30.06909396443887],
+    video: "https://youtu.be/Sr1Yb0xiRbA",
+    capitalMarker: [30.06909396443887, 31.245117187499996],
   },
   {
     id: 9,
@@ -228,8 +228,8 @@ const countryDetails = [
         "Avstraliya, Avstraliya Ittifoqi (Commonwealth of Australia)– Janubiy yarim shardagi davlat, A. materigi, Tasmaniya orol va boshqa orollarda joylashgan. Maydoni 7,682 mln. km². Aholisi 19 mln. kishi (1999). Poytaxti – Kanberra shahri",
     },
     images: [au1, au2, au3, au4],
-    video: "",
-    capitalMarker: [149.117431640625, -35.29831467054512],
+    video: "https://youtu.be/ISJMsVhY5Yk",
+    capitalMarker: [-35.29831467054512, 149.117431640625],
   },
 ];
 

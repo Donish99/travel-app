@@ -30,7 +30,7 @@ const CustomP = styled.p`
 const ImageInfo = ({ name, capital, img, info }) => {
   return (
     <ImageInfoDiv>
-      <CustomH2>({name})</CustomH2>
+      <CustomH2>{name}</CustomH2>
       <CustomH3>({capital})</CustomH3>
       <CustomImg src={img} alt="123" />
       <CustomP>{info}</CustomP>

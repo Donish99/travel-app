@@ -22,18 +22,19 @@ const CountryContent = ({ lang, data }) => {
   return (
     <>
       <ContentDiv>
-        {/* <ImageInfo
+        <ImageInfo
           name={data[language].name}
           capital={data[language].capital}
           img={data.images[0]}
-          info={data[language].info}    
-        /> */}
-        {/* <Images img={data.images} /> */}
-        <ReactPlayer
-          controls={true}
-          url="https://www.youtube.com/watch?v=UVCP4bKy9Iw"
+          info={data[language].info}
         />
-        <div style={{ height: 500, width: 500 }}>
+        <Images img={data.images} />
+        <ReactPlayer
+          style={{ width: "90%" }}
+          controls={true}
+          url={data.video}
+        />
+        <div style={{ height: 500, width: "90%" }}>
           <CountryMap position={data.capitalMarker} />
         </div>
       </ContentDiv>
