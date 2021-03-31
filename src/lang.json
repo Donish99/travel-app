@@ -1,0 +1,17 @@
+{
+    "en": {
+        "wellcome": "Hello",
+        "lang": "Language",
+        "search": "Sеarch"
+    },
+    "ru": {
+        "wellcome": "Привет",
+        "lang": "Язык",
+        "search": "Поиск"
+    },
+    "uz": {
+        "wellcome": "Salom",
+        "lang": "Til",
+        "search": "Qidirish"
+    }
+}
